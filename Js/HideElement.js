@@ -32,15 +32,17 @@ const resize = () =>{
 window.addEventListener('resize', resize)
 function swiperWidth(width){
     if(width < 768 ){
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            slidesPerView: 'auto',
-         pagination: {
-            el: '.swiper-pagination',
-             clickable: true,
-         },
-        })
     }
+}
+if(window.innerWidth < 768){
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        slidesPerView: 'auto',
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    })
 }
 
 
